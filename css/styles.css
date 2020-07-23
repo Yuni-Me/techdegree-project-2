@@ -1,0 +1,297 @@
+/* ---- Web Fonts ---- */
+
+@font-face {
+    font-family: 'Inconsolata Regular';
+    src: url('../fonts/InconsolataCondensed-Regular.ttf') format('truetype');
+}
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+/* ---- Base Styles ---- */
+
+* {
+	box-sizing: border-box;
+}
+body {
+    font-family: 'Inconsolata Regular', monospace, Arial, Helvetica, sans-serif;
+    color: rgb(88, 86, 86);
+    line-height: 1.6;
+}
+h3 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: rgb(56, 56, 56);
+    font-weight: 900;
+    letter-spacing: .1em;
+    color: rgb(27, 27, 27);
+}
+h2 {
+    font-size: 1.4em;
+    line-height: 1.1;
+    margin-top: 1.2em;
+    margin-bottom: .1em;
+    letter-spacing: .07em;
+}
+p {
+    font-size: .98em;
+    line-height: 1.4;
+    margin-bottom: 1.9em;
+    margin-top: 1.2em;
+}
+a {
+    text-decoration: none;
+    color: #222222;
+    /* font-size: 2em; */
+}
+img {
+	max-width: 100%;
+}
+.profile-banner img {
+	max-width: 70%;
+}
+h3#portfolio {
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+    font-size: 2em;
+    margin: 0;
+    padding: 15px 0;
+}
+.main-nav {
+	margin-top: 5px;
+}
+.name,
+.main-nav a {
+	display: block;
+    color: rgb(27, 27, 27);
+    font-weight: 900;
+    letter-spacing: .05em;
+}
+.main-nav a {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    background-color: #fff;
+    padding: 10px 15px;
+}
+
+/* ---- Layout Containers ---- */
+
+header {
+    background-color: #f8f8f8;
+    padding-bottom: 0;
+    margin-bottom: -10px;
+}
+.profile-banner {
+    text-align: center;
+    width: 90%; 
+    margin: 0 auto;
+	padding: 2.6em 0 1.4em;
+	margin-bottom: 60px;
+}
+.contact-card {
+    background-color: #f8f8f8;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+}
+
+
+/* ---- Page Elements ---- */
+
+.card:last-of-type {
+    margin-bottom: 70px;
+}
+.contact-card {
+    padding-top: 45px;
+}
+.contact-card p:last-of-type {
+    margin-bottom: 0;
+    padding-top: 0px;
+    padding-bottom: 55px;
+}
+.contact-card p:nth-child(3) {
+    margin-bottom: 0;
+}
+footer {
+    background-color: #f8f8f8;
+    height: 80px;
+}
+#footer-line {
+    border-top: 1px solid rgb(241, 241, 241);
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+footer p {
+    float: left;
+    margin-top: 25px;
+    font-size: 1em;
+    color: rgb(27, 27, 27);
+}
+.back-nav {
+    text-transform: uppercase;
+    font-size: 1em;
+    float:  right;
+}
+.footer-nav {
+    display: none;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+    
+    .home p {
+        font-size: 4em;
+    }
+    .name {
+        padding-top: 30px;
+        padding-bottom: 0;
+        margin-bottom: -12px;
+        font-size: 2em;
+    }
+    .main-nav a {
+        background-color: #f8f8f8;
+        margin-top: 10px;
+    }
+    .main-nav li {
+		display: inline-block;
+        margin-left: 15px;
+        background-color: #f8f8f8;
+    }
+    .profile-banner img {
+        width: 40%;
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    .profile-banner p {
+        width: 60%;
+        font-size: 1.3em;
+        text-align: left;
+        margin-top: 0;
+    }
+    .card {
+        width: 49%;
+    }
+    .card:nth-child(odd) {
+        float: left;
+    }
+    .card:nth-child(even) {
+        float: right;
+    }
+    .card h2 {
+        margin-top: 10px;
+    }
+    .card p {
+        margin: 10px 45px 45px;
+    }
+    .contact-card {
+        margin-top: -60px;
+    }
+    .contact-card p:nth-child(2) {
+        font-size: 1.3em;
+        padding: 0 22%;
+    }
+    .contact-card p:nth-child(3),
+    p:nth-child(4) {
+        font-size: 1.3em;
+    }
+    .contact-card p:nth-child(4) {
+        margin-top: 10px;
+    }
+    .main-footer p {
+        font-size: 1.2em;
+    }
+    .back-nav a {
+        display: none;
+    }
+    .footer-nav {
+        display: table;
+        float: right;
+    }
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 90%;
+		max-width: 1150px;
+    }
+    .name {
+        float: left;
+        margin-top: 20px;
+        font-size: 1.7em
+    }    
+    .main-nav {
+        float: right;
+        margin-top: 40px;
+    }
+    .profile-banner {
+        max-width: 1150px;
+    }
+    .profile-banner p {
+        width: 58%;
+        font-size: 1.5em;
+    }
+    .card {
+        width: 30%;
+        float: left;
+    }
+    #one,
+    #four {
+        margin-left: 0;
+        float: left;
+    }
+    #two,
+    #five {
+        margin-right: 5%;
+        margin-left: 5%;
+        float: left;
+    }
+    #three,
+    #six {
+        float: left;
+        margin-right: 0;
+    }
+    .card h2 {
+        margin-top: 10px;
+
+    }
+    .card p {
+        margin: 10px 16px 45px;
+    }
+    .contact-card {
+        margin-top: -30px;
+    } 
+    .main-footer p {
+        font-size: 1.2em;
+    }
+    .footer-nav,
+    .footer-nav .main-nav {
+        margin-top: 5px;
+    }
+	
+}
